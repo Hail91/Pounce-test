@@ -1,0 +1,7 @@
+{
+  "name": "pounce",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
