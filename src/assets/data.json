@@ -1,0 +1,90 @@
+{"SCU":[
+    {
+        "ID": 1,
+        "Name": "Ithaca Children's Center",
+        "Rooms": [
+            {
+                "ID": 1,
+                "Name": "Front Lobby"
+            }
+        ]
+    },
+    {
+        "ID": 2,
+        "Name": "Codinton NE" ,
+        "Rooms": [
+            {
+                "ID": 1,
+                "Name": "Front Lobby"
+            }
+        ]
+    },
+    {
+        "ID": 3,
+        "Name": "Codinton SW",
+        "Rooms": [
+            {
+                "ID": 1,
+                "Name": "Front Lobby"
+            }
+        ]
+    },
+    {
+        "ID": 4,
+        "Name": "Codinton Main",
+        "Rooms": [
+            {
+                "ID": 1,
+                "Name": "Front Lobby"
+            }
+        ]
+    },
+    {
+        "ID": 5,
+        "Name": "Codinton SE",
+        "Rooms": [
+            {
+                "ID": 1,
+                "Name": "Front Lobby",
+                "Plugs": [
+                    {
+                        "ID": 1,
+                        "Name": "East Wall"
+                    },
+                    {
+                        "ID": 1,
+                        "Name": "North Wall"
+                    },
+                    {
+                        "ID": 1,
+                        "Name": "Countertop"
+                    },
+                    {
+                        "ID": 1,
+                        "Name": "Computer Monitor"
+                    },
+                    {
+                        "ID": 1,
+                        "Name": "Coffee Maker"
+                    }
+                ]
+            },
+            {
+                "ID": 2,
+                "Name": "Corridor"
+            },
+            {
+                "ID": 3,
+                "Name": "Ladies Room"
+            },
+            {
+                "ID": 4,
+                "Name": "Men's Room"
+            },
+            {
+                "ID": 5,
+                "Name": "Main Corridor"
+            }
+        ]
+    }
+]}

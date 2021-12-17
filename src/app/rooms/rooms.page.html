@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="pounce">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ selectedSCU?.name }} </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-align-items-stretch">
+      <ion-col size="6" *ngFor=" let r of rooms" class="ion-align-self-stretch">
+        <ion-card routerDirection="forward" routerLink="room/{{r.ID}}">
+          <fa-icon
+            *ngIf="r.HasAlert"
+            [icon]="['fas', 'exclamation-triangle']"
+            style="float: right"
+            transform="left-2 down-5"
+            primaryOpacity="0.9"
+            [styles]="{'stroke': 'red', 'color': 'red'}"
+          ></fa-icon>
+          <ion-card-content>
+            <ion-text color="primary" class="ion-nowrap">
+              <strong>{{ r.Name }}</strong>
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <img slot="end" src="../../assets/icon/grey-logo.png" height="55px" />
+  </ion-toolbar>
+</ion-footer>

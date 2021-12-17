@@ -1,0 +1,54 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar color="pounce">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{selectedRoom?.Name}} - Alert <fa-icon [icon]="i.faExclamationTriangle"></fa-icon>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-range min="0" max="100" step="2" value="41" pin="true">
+          <fa-icon [icon]="i.faThermometerEmpty"  size="2x" slot="start"></fa-icon>
+          <fa-icon [icon]="i.faThermometerFull"  size="3x" slot="end"></fa-icon>
+        </ion-range>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" class="ion-text-center">
+        <h1>72</h1> 
+        Set-Point
+      </ion-col>
+      <ion-col size="6" class="ion-text-center">
+        <h1>41</h1> 
+        Current
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="danger">
+          Clear Alert
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <br><br><br><br>
+        <ion-button fill="clear">
+          Other Settings
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

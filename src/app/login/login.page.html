@@ -1,0 +1,28 @@
+<ion-content>
+  <div>
+    <ion-img src='../../assets/icon/grey-logo.png'></ion-img>
+    <ion-card>
+
+      <ion-item lines="none">
+        <ion-button slot="end" fill="clear">Create Account</ion-button>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="floating">Username</ion-label>
+        <ion-input style="border-bottom: 1px #3880ff solid;" autocomplete="username"></ion-input>
+      </ion-item>
+
+      <ion-item  lines="none">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input style="border-bottom: 1px #3880ff solid;" type="password" (keydown)="onKeydown($event)" autocomplete="current-password">
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-button slot="start" fill="clear">Forgot password?</ion-button>
+        <ion-button slot="end" (click)="login()">Login</ion-button>
+      </ion-item>
+    </ion-card>
+
+  </div>
+</ion-content>

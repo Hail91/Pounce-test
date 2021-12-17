@@ -1,0 +1,6 @@
+- ithaca child in top bar
+- list in grid layout all pages. 
+    - clear alert to the left
+    - other settings to the right.
+    - remove alert button, add icon to Other settings. 
+    - outlet order, toggle -> icon -> title

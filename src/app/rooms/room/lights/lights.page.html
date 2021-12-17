@@ -1,0 +1,110 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="pounce">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lighting</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row
+      class="
+        ion-align-items-center ion-justify-content-center ion-align-self-center
+      "
+    >
+      <ion-col>
+        <ion-item lines="none">
+          <ion-text>
+            <h2 style="margin-top: 10px">General Area</h2>
+          </ion-text>
+          <ion-toggle checked="true"></ion-toggle>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-range min="0" max="100" step="2" value="60" pin="true">
+          <fa-icon
+            [icon]="['far','lightbulb']"
+            size="2x"
+            slot="start"
+          ></fa-icon>
+          <fa-icon [icon]="['far','lightbulb']" size="3x" slot="end"></fa-icon>
+        </ion-range>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <h1>60</h1>
+        Intensity
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" class="ion-align-self-stretch"></ion-col>
+      <ion-col size="6" class="ion-align-self-stretch">
+        <ion-card>
+          <fa-icon
+            *ngIf="false"
+            [icon]="['fas', 'exclamation-triangle']"
+            style="float: right"
+            transform="left-2 down-5"
+            rimaryOpacity="0.9"
+            [styles]="{'stroke': 'red', 'color': 'red'}"
+          ></fa-icon>
+          <ion-card-content>
+            <ion-text color="primary" class="ion-nowrap">
+              <strong>Other Settings</strong>
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-item lines="none">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-text>
+              <h4>Other Lights</h4>
+            </ion-text>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" class="ion-align-self-stretch">
+          <ion-card>
+            <ion-card-content>
+              <ion-text color="primary" class="ion-nowrap">
+                <strong>Recessed</strong>
+              </ion-text>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" class="ion-align-self-stretch">
+          <ion-card>
+            <ion-card-content>
+              <ion-text color="primary" class="ion-nowrap">
+                <strong>White Board</strong>
+              </ion-text>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-footer>
+<ion-footer>
+  <ion-toolbar>
+    <img slot="end" src="../../assets/icon/grey-logo.png" height="55px" />
+  </ion-toolbar>
+</ion-footer>

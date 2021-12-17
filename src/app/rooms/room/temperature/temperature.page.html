@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="pounce">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{selectedRoom?.Name}} - Temperature
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-range min="0" max="100" step="2" value="71" pin="true">
+          <fa-icon [icon]="['fas', 'thermometer-empty']" size="2x" slot="start"></fa-icon>
+          <fa-icon [icon]="['fas', 'thermometer-full']" size="3x" slot="end"></fa-icon>
+        </ion-range>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" class="ion-text-center">
+        <h1>72</h1>
+        Set-Point
+      </ion-col>
+      <ion-col size="6" class="ion-text-center">
+        <h1>71</h1>
+        Actual
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col size="6" class="ion-align-self-stretch" ></ion-col>
+      <ion-col size="6" class="ion-align-self-stretch">
+        <ion-card>
+          <fa-icon *ngIf="isAlerting" [icon]="['fas', 'exclamation-triangle']" style="float: right;"
+            transform="left-2 down-5" rimaryOpacity="0.9" [styles]="{'stroke': 'red', 'color': 'red'}"></fa-icon>
+          <ion-card-content>
+            <ion-text color="primary" class="ion-nowrap">
+              <strong>Other Settings</strong>
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <img slot="end" src='../../assets/icon/grey-logo.png' height="55px" />
+  </ion-toolbar>
+</ion-footer>
